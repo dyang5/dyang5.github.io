@@ -28,9 +28,14 @@ twitter_username:
 github_username: dyang5
 
 # Build settings
+
+# Removed minima theme as it is now a regular theme
 theme: minima
 plugins:
   - jekyll-feed
+
+google_analytics: UA-NNNNNNNN-N
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
