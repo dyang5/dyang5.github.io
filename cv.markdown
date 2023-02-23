@@ -15,7 +15,7 @@ permalink: /CV/
 - **Teaching Assistant and Grader** for PHIL 12 (Logic) at *Swarthmore College* (Fall 2021)
 - **Mathematics Research Assistant** (Exploring Projective SET) at *Swarthmore College* (Summer 2021)
 
-# Clubs on Campus
+# Club Activities
 - **Leader** of the Interactive Math Colloquium Club
 - **Sports Writer** for *<a href = "https://swarthmorephoenix.com/"> The Phoenix</a>*
 - **Participant** of the *<a href = "https://icpc.global/">International Collegiate Programming Competition</a>*
