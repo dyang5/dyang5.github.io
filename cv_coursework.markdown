@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Coursework
-permalink: /CV/Coursework
+permalink: CV/Coursework
 ---
 
 ## Spring 2023
