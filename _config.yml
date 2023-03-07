@@ -39,6 +39,12 @@ plugins:
 
 google_analytics: UA-NNNNNNNN-N
 
+gems:
+  - jekyll-relative-links
+
+relative_links:
+  enabled: true
+  collections: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
