@@ -22,4 +22,4 @@ permalink: /CV/
 - **Participant** of the Swarthmore Puzzle Collective
 
 # Coursework
-Find a more detailed version of my coursework <a href = "/CV/coursework"> here</a>.
+Find a more detailed version of my coursework <a href = "coursework"> here</a>.
