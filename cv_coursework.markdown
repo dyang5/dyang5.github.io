@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Detailed Coursework
+title: Coursework
 permalink: /CV/Coursework
 ---
 

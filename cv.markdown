@@ -20,3 +20,6 @@ permalink: /CV/
 - **Sports Writer** for *<a href = "https://swarthmorephoenix.com/"> The Phoenix</a>*
 - **Participant** of the *<a href = "https://icpc.global/">International Collegiate Programming Competition</a>*
 - **Participant** of the Swarthmore Puzzle Collective
+
+# Coursework
+Find a more detailed version of my coursework <a href = "/CV/coursework"> here</a>.
