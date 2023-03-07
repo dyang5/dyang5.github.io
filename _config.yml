@@ -27,6 +27,10 @@ twitter_username:
 github_username: dyang5
 
 # Build settings
+header_files:
+  - about.md
+  - cv.md
+  - project.md
 
 # Removed minima theme as it is now a regular theme
 theme: minima
