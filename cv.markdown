@@ -24,7 +24,7 @@ Read more about my research projects <a href = "/projects"> here</a>.
 
 # Club Activities
 - **Leader** of the Interactive Math Colloquium Club
-- **Sports Writer** for *<a href = "https://swarthmorephoenix.com/"> The Phoenix</a>*
+- **Sports Writer** for *<a href = "https://swarthmorephoenix.com/author/dyang5/"> The Phoenix</a>*
 - **Participant** of the *<a href = "https://icpc.global/">International Collegiate Programming Competition</a>*
 - **Participant** of the Swarthmore Puzzle Collective
 
