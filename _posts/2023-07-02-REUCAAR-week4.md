@@ -1,0 +1,97 @@
+---
+layout: post
+title:  REU-CAAR, Week 4
+date:   2023-07-02
+description: Week 4 of my Summer 2023 experience @ REU-CAAR.
+tags: research cs
+categories: caar
+---
+
+#### <u>Day 22 (June 26th)</u>
+
+Week 4, Day 1
+
+I can't believe we're already on the 4th week of this program...
+ - 8:30 - 9:00 AM: Got out earlier than normal for my morning swim, but the lifeguards were doing some lane-line moving due to a swim group coming in before me. Unlike the previous lane-line shift, these lifeguards kept me out of the pool, and so I only got in 18ish minutes of a swim this morning. I was definitely a bit bummed about that but I can understand that the lifeguards are just trying to do their job.
+
+- 10:00 - 11:30 AM: Shorter morning session today due to an earlier lunch talk. SS and I spent the morning working on incorporating our test set and modifying our program to run on a folder of images (mainly SS). Otherwise, I worked on a presentation for our meeting tomorrow night with our advisor, which summarizes the work we've been doing and questions we have.
+
+- 11:30 AM - 12:45 PM: Daniel Apon, an Adjunct Professor of CS here who has done industry work in Post-Quantum Crytography, came in for a lunch talk today and talked about his career path, along with what he did in each of his roles at NIST (National Institute of Standards and Technology) and MITRE. I thought the talk was quite good -- there was not much heavy theory but he explained the work he did/related concepts quite clearly. I find that many of these invited speakers are quite charismatic while being brilliant, and that's really cool to see. It was cool to also learn a bit more about Cryptography and his work, which was on the Applied Pure Math side -- something I might be interested in doing in my career as well.
+
+- 1:00 - 4:00 PM: After modifying our testing program to run on a "test set" of images, we manually classified the genders for each person in our dataset. It turns out that SS's face detection & gender classification model has a 53% accuracy whereas my object detection & gender classification model has a 47% accuracy. These are obviously quite poor -- by straight up guessing, we might expect a 50% accuracy. We'll definitely need to present these results to our advisor and talk about potential fixes -- or test a separate gender classification model (or maybe even train our own). I'm not terribly worried about these numbers just yet since we are sort of just experimenting (and using pretrained models), but if the issues persist after a week or two, this could be cause for concern. Another small concern is that the detection model we are using, YOLOv8, is very well-known and widely-used, but it seems like the creators of the model have not cared to write a paper about it or the architecture they use; this seems a bit weird considering their whole goal is to be open-source and advance AI detection models. We'll also need to ask our advisor about that. Near the end of the research day, I picked up a check from the REU for the first two-three weeks, which was nice.
+
+- 5:00 - 6:00 PM: Second swim of the day. Really nice effort (31 laps in just around 20 minutes). I might do more of these doubles if I feel good/it makes sense weather-wise, because more exercise is always welcome (and fun).
+
+Post-research, I had planned to go play tennis with NL and MA, but it was nearly 90 degrees out and way too hot for that. Consequently, I decided to go for another pool swim, which fit the weather much better. For some reason, I felt motivated to do some "sets" (short but speedy mini-workouts) and was quite pleased to notice my general endurance/effort. Maybe all the exercise is paying off; I definitely feel good about where I'm at, but the swimming efforts show it too. I think this is definitely one + about a REU compared to research at a home institution -- at a LAC like Swarthmore, general resources are limited (athletic facilities, connection with other research students, etc.) whereas at a REU, all of these things are widely available. A bonus is the research of course, which hopefully will continue to go smoothly and successfully. For any interested readers, I would definitely recommend applying to REUs ASAP.
+
+#### <u>Day 23 (June 27th)</u>
+
+Week 4, Day 2; Meeting Day 4
+
+- 8:30 - 9:00 AM: Morning swim. Did two of the 4x50 workouts I mentioned in a previous entry, which was great. I ended up going for 27ish minutes and 40 laps, which I was happy with.
+
+- 10:00 AM - 12:00 PM: Since today is our presentation day, we spent much of the morning going through the presentation and our individual talking points. SS was out for the morning, and so I presented the existing presentation to AF and XG to hear their thoughts and to make sure that everyone had material to go over. After presenting the gender classifier results, XG wanted to try a different gender classifier model and went to experiment with EfficientNet, and to train it on a face dataset like FairFace. After further consideration, I realized that a gender classifier that has an accuracy of 50% is honestly quite bad -- and I couldn't figure out why the Caffe model, even though it is a bit outdated, was performing that badly. Consequently, I also went to look for different models to implement, and I found the [DeepFace](https://github.com/serengil/deepface) classifier.
+
+- 1:00 - 4:00 PM: After taking some time to look through the DeepFace documentation and various tutorials, I spent the afternoon setting up DeepFace on my machine. Since I couldn't figure out how to integrate the DeepFace face detection into my code, I stuck with the YOLOv8 face detection that my group has been working with for the last week (which is fine -- the detection is good but the gender classifier was the main bottleneck in performance). Running the DeepFace analyzer to get the gender and race of the detected faces, I found a noticeable difference in performance -- of the 11 images (roughly 50+ faces), the classifier gave a 85%-ish accuracy for both gender and race, which is a great improvement. We promptly added these results to our presentation and plan to continue working with the DeepFace classifier.
+
+It was raining after research, so I went back to the dorms to relax before our meeting. I grabbed some CFA for dinner (and found out that I have around $860 dollars left for the remaining 6 and a half weeks). I then looked over the presentation a bit and walked through my parts.
+
+- 8:00 - 8:45 PM: Meeting time with our advisor. The meeting itself went relatively smoothly -- this meeting was a bit different than others in the sense that we were presenting what we have been working on rather than sort of pitching our project ideas/discussing literature review. SS and I talked about the work we have been doing with YOLOv8 and the DeepFace classifier (as well as our previous Caffe gender classifier from [Levi and Hassner](https://talhassner.github.io/home/publication/2015_CVPR)). AF and XG presented their work on domain translators and RL, and we all discussed next steps, which include testing the DeepFace classifier on a larger, labeled dataset and comparing the results to the EfficientNet approach XG is trying. The main tips we got were to make greater use of pre-existing work (with regards to models such as the gender classifier ones, RL approaches, and domain translators) and to ask more questions if we're stuck in the group Slack channels. Our advisor also talked a bit about potentially splitting up work to prep for writing papers (she mentioned that it's usually unheard of to have four co-authors on the same paper). I am not too worried about this but I imagine that we will have this conversation together as a group when the time comes; the positive side of this is that our advisor seems to think that we'll have a paper out given our overall trend, which is great! I know that other REU participants have mentioned that their advisors are less than optimistic about paper chances and that they are bummed about that; maybe ML is just different in that sense, but who knows?
+
+Overall, it was definitely a "productive" and successful day for me due to the DeepFace classifier implementation. 
+
+#### <u>Day 24 (June 28th)</u>
+
+Week 4, Day 3
+
+ - 8:30 - 9:00 AM: Morning swim! I went for the whole 30 minutes and swam for 45+ laps. I'm really happy with my consistency and general fitness progress this summer; hopefully I keep it up.
+
+ - 10:00 AM - 12:00 PM: As I wrote yesterday, my main goal today was to test the DeepFace classifier on a large labeled face dataset like FairFace. In the morning, I spent most of my time trying to convert FairFace's validation dataset labels and the corresponding csv file to match the output of the DeepFace classifier, using Python's `pandas` library (frequently used for data analysis). For example, I replaced instances of "Southeast Asian" and "East Asian" in the race label for the FairFace dataset to "asian" (since the DeepFace race classifier does not differentiate between Southeast and East Asians). In general, this process probably took longer than it should have but it was good to get some more experience using `pandas` even if I could have done the process much quicker manually. (This process also reminded me of some of the work I did with my group in my ML final project at Swarthmore)
+
+ - 1:00 - 4:00 PM: The next step of our work is to actually test the DeepFace gender and race classifiers on the FairFace dataset. To do this, I downloaded the FairFace validation set (with face images and their corresponding labels) and moved them onto the cluster (this took quite a while -- I made the mistake of unzipping the validation folder before moving it to the cluster, which made the process slower). I also wrote skeleton code for testing the classifier using XG's code that he used to train/validate the EfficientNet model he's been working on. I don't think this is fully complete and will need to go back to working on this tomorrow; I'm definitely hopeful that I'll have analysis of the DeepFace classifier on the FairFace dataset by the end of the week.
+
+I stayed a bit after research to make sure that all the FairFace files had been copied to the cluster. Afterwards, I headed back to the dorms to relax before going to the gym to play some basketball with DS, AB, and SS. It was definitely good to get some more exercise in (my first indoor exercise in a week and a half at least) and shoot some hoops -- though I did end up getting some blisters because of my poor choice of socks. Afterwards, we grabbed some CFA before it closed at 7 PM, and I went back to do CodeForces and other related work.
+
+#### <u>Day 25 (June 29th)</u>
+
+Week 4, Day 4
+
+ - 8:30 - 9:00 AM: AQI went up to 120 in the morning (150 now), making the air "Unhealthy." As a result, I made the decision to not swim in the morning, which kind of sucked but was probably better for overall health. 
+
+- 10:00 AM - 12:00 PM: As is customary on Thursday mornings, I logged onto Zoom to join my advisor's group research meetings. Today, a few grad students discussed their relative intern projects at Chevron (which was related to VLMs) and Capital One. Another student gave a research talk on "Hyper-Dimensional Function Encoding and its Extensions." The first two talks had some confidential details, and so I refrained from note-taking. The other talk was more math-focused and a bit difficult to follow along note-wise, but the notes I took for that talk are available in the `Notes` folder as per usual.
+
+ - 1:00 - 4:00 PM: As I've been working on for the last few days, I continued to try to set up my work in preparation for analysis on the FairFace dataset. To start, I initially chose to focus my analysis on the smaller testset with 10ish images and 50ish people. My reasoning for this is that I don't want to have to run large jobs on the cluster over and over to get the analysis I want, and so I want to have a mini-example of all the analysis I want using the testset that I can simply reuse on the larger FairFace dataset. Since yesterday I managed to align the FairFace labels with the DeepFace classifier's outputs, I spent most of today trying to further set up the analysis. The first problem was a small error in how we were saving the cropped image files -- we were saving them as "[name].jpg_{number}.jpg" (notice the two `.jpg`s), whereas the file names only contain the ending suffix. The main work I did today (which took nearly two hours to fix -- the error was actually that a random `.DS_Store` somehow got saved in our examples folder, making our program fail to crop images) was to standardize the file names. As explained above, the error itself was quite small and relatively simple, but it took a long time to debug since  `.DS_Store` files do not show in the directories unless you run `ls -a`. It was hilarious that this stalled me for so long but definitely a good learning experience.
+
+ In general, progress is a bit slower than I would like (I want to run the DeepFace classifier on FairFace by the end of the week), but all these steps are common steps in Machine Learning and it's good that I'm getting to code through it, even if it is a tedious process. More progress (actually setting up to match outputs between classifier and hand-labeled testset data, which we also made today) to be made tomorrow, hopefully!
+
+- 4:00 - 5:00 PM: Listened to a talk by Professor Maria Cameron (Math REU director) on "Quantifying Rare Events in Stochastic Systems." Even with previous Applied Math experience, the talk was a bit hard to follow, but it's always good to hear about what others are working on.
+
+After research, I grabbed some Union Pizza for dinner (after also having it for the first time for lunch) since I wanted to stay away from having CFA for back to back dinners. I ended up in NL's suite with LH, SK, and DS, where we talked over dinner and more afterwards. 
+
+#### <u>Day 26 (June 30th)</u>
+
+Week 4, Day 5
+
+ - 8:30 - 9:00 AM: Since the AQI was at 150ish yesterday, I didn't have much hope for a morning swim. When I woke up, it was around 120 which is still Unhealthy for Sensitive Groups, so no swim for me today.
+
+ - 10:00 AM - 12:00 PM: My job was to continue with my work from the previous days. It sucks that progress isn't going as fast as how easy the task may seem, but as I said previously, I think it's good for me to get this coding practice in. In the morning, I finished my "toy dataset", finishing up analysis comparing the test set's ground truth labels with the DeepFace classifier's output. On the 50ish people in the dataset, it got nearly 90% of the genders correctly labeled and 70% of the races correctly labeled (though again, the "race labels" were hand-labeled and a combination of decisions made by our research group -- so many of the races were ambiguous). Though I only compared the "dominant race" (i.e. the one that the classifier had the highest confidence for) outputs, it was good to see that for many of the examples it classified "incorrectly," the classifier also had a relatively high confidence for the "ground-truth label."
+
+ - 1:00 - 4:00 PM: In the afternoon session, I wrote some smaller code to extend my work on the toy dataset to the actual FairFace validation set, so we can better analyze the DeepFace gender classifier and its errors on labeled, facial images. After taking some time to set up the code and also attending a PhD defense for Eleftheria Briakou (a grad mentor for the "Machine Translation for Wikipedia Group") on her project "Detecting Fine-Grained Semantic Divergences to Improve Translation Understanding Across Languages," I tried to run the code on the cluster -- after a hour, my Jupyter Notebook bugged and there was no progress. After some brief reflection (and asking around), I realized that I should be running the Notebook on a GPU from the cluster, and so I spent the rest of the day trying to get that running. To put it simply, this did not work, as so even though I know what (preliminary) code I want to run, I haven't been able to get it done using the FairFace validation set. I definitely want to try this a bit more over the long four-day weekend (due to the 4th of July and optional day on Monday) so that I can hopefully have some more detailed analysis to show for on either our next meeting with our advisor or our July 6th meeting.
+
+ I stayed a bit after research to try to figure how to use a GPU to run my code -- without any avail. It somehow started raining out, so I waited out the rain before heading back to the dorms when it was raining a bit less. For dinner, I had some leftovers from my PE lunch and combined it with some older leftovers from QD. Afterwards, I watched "The Menu" with LH, SS, AB, MA (and CK briefly) before resting for the night.
+
+#### <u>Day 27 (July 1st)</u>
+
+Week 4, Day 6
+
+Today was the first day of a four day weekend for us. Luckily, the AQI was a lot better so I went for a 50 lap swim in the morning with SS. Despite learning that the Masters Swimmers swim from 8:45 - 10:30ish which caused a lot of the lanes to be filled up, the workout was really nice and it was good to get back in the pool after two days of no swimming. 
+
+Afterwards, I grab some Panda Express for lunch and retired to my room to chill and work on some CodeForces problems. For dinner, I went to LaoTao Hotpot with AB, SS, LH, NL, SK, and a student from REU-MATH; this was my first hotpot experience outside of having it with my family and it was pretty good. Overall, a nice and chill day.
+
+#### <u>Day 28 (July 2nd) </u>
+
+Last Day of Week 4
+
+I woke up a bit later than normal and went for a quick morning swim (25 min, 40 laps) before a tennis session with NL. I spent the afternoon mostly lounging around and trying to get my code to run on the cluster's GPU resources (to no avail, unfortunately). For dinner, I went with AB to Root's Natural Kitchen, a healthier Q-Doba alternative that was better than I expected, and grabbed some basic food (Granola, Yogurt, Strawberries) from Trader Joe's. 
+
+And this concludes Week 4 of the REU! Time goes by so fast -- I'm a bit bummed about how little comparatively I was able to get done in research this week but I've been taking baby steps towards the end goal, and I guess that's alright. We have two days off to start the week (July 3rd and 4th) and my parents will be visiting, before a meeting and a presentation for our research group later in the week -- so it will be a busy one.
