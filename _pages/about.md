@@ -19,6 +19,6 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I’m a senior at Swarthmore College studying Mathematics and Computer Science on the Honors track. I'm interested in pursuing a PhD in either Mathematics, Theoretical CS, or Operations Research and am planning to apply to graduate programs this fall. 
+I’m a senior at Swarthmore College studying Mathematics and Computer Science on the Honors track. I'm interested in pursuing a career in academia and am planning to apply to graduate programs this fall. 
 
 At Swarthmore, I lead the Interactive Math Colloquium committee, code as part of the ICPC team, write sports articles for The Phoenix, and work for both the Math & CS departments.
