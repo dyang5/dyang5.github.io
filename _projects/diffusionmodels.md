@@ -8,7 +8,14 @@ category: research
 giscus_comments: true
 ---
 
-Every project has a beautiful feature showcase page.
+**Background**: Diffusion models are text-to-image generative artificial intelligence models.  To use a diffusion model, a user enters a text prompt and the model outputs an image. Notably, though, the generated images inherit the biases of the large-scale datasets that the model is trained on; these datasets themselves have implicit biases, reflecting gender, race, age, and other societal stereotypes, and these stereotypes are consequently "learned" and perpetuated by the model.
+
+**Motivation**:  We are interested in improving the “fairness” in diffusion models, in terms of gender and race representation in the output of these models. 
+
+To extend previous work, we were interested in investigating approaches for image output when there is more than one face/person. Previous work has focused on single-person output since many of the large-scale face datasets, including LAION-5B and FairFace, are trained on individual rather than group images. Furthermore, our approaches come in two flavors: we attempt to modify the generated image output as well as fine-tune the diffusion model itself.
+
+
+<!-- Every project has a beautiful feature showcase page.
 It's easy to include images in a flexible 3-column grid format.
 Make your photos 1/3, 2/3, or full width.
 
@@ -78,4 +85,4 @@ Here's the code for the last row of images above:
     </div>
 </div>
 ```
-{% endraw %}
+{% endraw %} -->
