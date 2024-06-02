@@ -5,7 +5,7 @@ description: Summer 2023 Research Project @ REU-CAAR.
 img: assets/img/3.jpg
 importance: 2
 category: research
-giscus_comments: true
+giscus_comments: false
 ---
 
 **Background**: Diffusion models are text-to-image generative artificial intelligence models.  To use a diffusion model, a user enters a text prompt and the model outputs an image. Notably, though, the generated images inherit the biases of the large-scale datasets that the model is trained on; these datasets themselves have implicit biases, reflecting gender, race, age, and other societal stereotypes, and these stereotypes are consequently "learned" and perpetuated by the model.

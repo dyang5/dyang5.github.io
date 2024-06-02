@@ -19,6 +19,6 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I’m a senior at Swarthmore College studying Mathematics and Computer Science on the Honors track. I'm interested in pursuing a career in academia and am planning to apply to graduate programs this fall. 
+I'm an incoming PhD student at [Columbia's Industrial Engineering and Operations Research (IEOR)](https://ieor.columbia.edu/) Department. I recently graduated from Swarthmore College, earning High Honors with a B.A. in Mathematics and Computer Science. 
 
-At Swarthmore, I lead the Interactive Math Colloquium committee, code as part of the ICPC team, write sports articles for The Phoenix, and work for both the Math & CS departments.
+At Swarthmore, I led the Interactive Math Colloquium committee, coded as part of the ICPC team, wrote sports articles for The Phoenix, and worked for both the Math & CS departments. I was also honored as the sole recipient of the Heinrich W. Brinkmann Award, given to "a set of graduating seniors who have demonstrated dedication to the field and to the Department of Mathematics and Statistics," as well as the Lippincott Fellowship to support my graduate studies.
