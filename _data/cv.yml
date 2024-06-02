@@ -11,8 +11,11 @@
 - title: Education
   type: time_table
   contents:
+    - title: Columbia University
+      institution: Ph.D. in Industrial Engineering and Operations Research
+      year: 2024 - 
     - title: Swarthmore College
-      institution: B.A in Mathematics and Computer Science. Honors Degree.
+      institution: B.A in Mathematics and Computer Science. High Honors.
       year: 2020 - 2024
       # description:
       #   - Honors Math & CS.
@@ -27,6 +30,11 @@
 - title: Research
   type: time_table
   contents:
+    - title: Swarthmore College 
+      institution: <i>Math Researcher (Algebraic Combinatorics)</i>
+      year: Summer 2024
+      description:
+        - Advised by Professor Linda Chen at Swarthmore College.
     - title: REU-CAAR (Combinatorics, Algorithms, and AI for Real Problems)
       institution: <i>Researcher at University of Maryland, College Park (Fairness in Diffusion Models)</i>
       year: Summer 2023
@@ -38,7 +46,7 @@
       year: Summer 2022
       description:
         - Analyzed properties of five limit circle packings from tilings of the plane, including integrality/superintegrality and commensurability to known polyhedra. Found first known superintegral packing that is non-commensurable to any polyhedra.
-        - Advised by Professor Ian Whitehead at Swarthmore College and paper submitted to Journal of Geometry.
+        - Advised by Professor Ian Whitehead at Swarthmore College. Paper published in Journal of Geometry.
     - title: Swarthmore College
       institution: <i>Math Researcher (Exploring Projective SET)</i>
       year: Summer 2021
@@ -46,26 +54,26 @@
         - Used Linear and Abstract Algebra to classify and discover the properties of the algebraic space of projective SET. Calculated the number of projective sets of a certain size and the probability a set is achieved in a deal of cards using the Orbit-Stabilizer Theorem and counting techniques. 
         - Advised by Professor Lucas Van Meter and Professor Cathy Hsu at Swarthmore College.
 
-
 - title: Work Experience
   type: time_table
   contents:
+    - title: Math Clinician
+      institution: <i> Swarthmore College</i>
+      year: 2022 - 2024
+      description: 
+        - Spring 2024 -- <b> General One-on-One Clinician </b> and <b> General Math Clinician </b> (only student in both roles).
+        - Fall 2023 -- <b>General One-on-One Clinician</b>.
+        # supporting MATH 027/028 (Linear Algebra), MATH 033/034 (Several Variable Calculus), MATH 063 (Real Analysis), MATH 102 (Modern Algebra II), STAT 001/011/021 (Intro Stats courses).
+        - Spring 2023 -- <b>MATH 043 and MATH 044 (Differential Equations) Clinician</b> (first ever).
+        - Fall 2022 -- <b>MATH 033, MATH 034, and MATH 035 (Multivariable Calculus) Clinician</b>.  
     - title: Math and Computer Science Course Grader
       institution: <i>Swarthmore College</i>
-      year: 2021 - Present
+      year: 2021 - 2023
       description:
-        - Fall 2023 -- <b>Math Department Grader</b> (specific course hidden for anonymity during semester).
+        - Fall 2023 -- <b>MATH 058 (Number Theory)</b>.
         - Spring 2023 -- <b>CPSC 041 (Algorithms)</b>.
         - Spring 2022 -- <b>MATH 035 (Honors Several Variable Calculus)</b>.
         - Fall 2021 -- <b>MATH 034 (Several Variable Calculus)</b>.
-    - title: Math Clinician
-      institution: <i> Swarthmore College</i>
-      year: 2022 - Present
-      description: 
-        - Fall 2023 -- <b>General One-on-One Clinician</b> 
-        # supporting MATH 027/028 (Linear Algebra), MATH 033/034 (Several Variable Calculus), MATH 063 (Real Analysis), MATH 102 (Modern Algebra II), STAT 001/011/021 (Intro Stats courses).
-        - Spring 2023 -- <b>MATH 043 and MATH 044 (Differential Equations) Clinician</b>.
-        - Fall 2022 -- <b>MATH 033, MATH 034, and MATH 035 (Multivariable Calculus) Clinician</b>.
     - title: Grader and Message Board Assistant
       institution: <i> Art of Problem Solving</i>
       year: 2020 - 2022
@@ -79,14 +87,13 @@
         - Assist students in live online classes and offer real-time help to students. 
         - Co-TA for <a href = "https://data.artofproblemsolving.com/course-docs/syllabi/intro-counting-syllabus.pdf">Introduction to Counting & Probability</a> and <a href = "https://artofproblemsolving.com/school/course/maa-amc12">AMC 12 Problem Series</a> classes.
         - Substitute TA for classes such as Intermediate Algebra, Precalculus, etc.
-# - title: Honors and Awards
-#   type: time_table
-#   contents:
-#     - year: 
-#       items: 
-#         - 
-#     - year: 
-#       items: 
+- title: Honors and Awards
+  type: map
+  contents:
+    - name: 2024 
+      value: Lippincott Fellowship
+    - name: 2024
+      value: Heinrich W. Brinkmann Award
 
 # - title: Academic Interests
 #   type: nested_list
